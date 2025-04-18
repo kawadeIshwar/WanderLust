@@ -20,24 +20,12 @@ module.exports.showListing = async (req, res) =>{
 
 };
 
-const defaultImage = "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60";
-
-module.exports.createListing = async (req, res) => {
-    const listingData = req.body.listing;
-    const imageUrl = listingData.image?.url?.trim() || defaultImage;
-
-    const newListing = new Listing({
-        ...listingData,
-        image: {
-            url: imageUrl,
-            filename: "",
-        },
-        owner: req.user._id,
-    });
-
-    await newListing.save();
-    req.flash("success", "New Listing created");
-    res.redirect("/listings");
+module.exports.createListing = async(req, res) =>{
+        const newListing = new Listing(req.body.listing);
+        newListing.owner = req.user._id;
+        await newListing.save();
+        req.flash("success", "New Listing created")
+        res.redirect("/listings"); 
 };
 
 module.exports.renderEditForm = async (req, res)=>{
