@@ -1,24 +1,33 @@
-body{
+body {
     font-family: "Plus Jakarta Sans", sans-serif !important;
     display: flex;
     flex-direction: column;
     min-height: 100vh;
 }
 
-.container{
+.container {
     flex: 1;
 }
-.navbar{
+
+.navbar {
     height: 5rem;
     background-color: white;
 }
 
-.fa-compass{
+.search-inp:hover{
+    box-shadow: 1px 1px 8px 2px rgb(182, 180, 180);
+}
+
+.search-btn:hover{
+    box-shadow: 1px 1px 8px 3px rgb(255, 129, 129);
+}
+
+.fa-compass {
     color: #fe424d;
     font-size: 2.5rem;
 }
 
-.nav-link{
+.nav-link {
     color: #222222 !important;
 }
 
@@ -28,11 +37,13 @@ body{
     color: #222222;
 }
 
-.f-info-links a:hover{
+.f-info-links a:hover {
     text-decoration: underline;
 }
 
-.f-info-links, .f-info-socials, .f-info-brand{
+.f-info-links,
+.f-info-socials,
+.f-info-brand {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -42,6 +53,7 @@ body{
 .f-info-socials i {
     margin-right: 1rem;
 }
+
 .f-info {
     text-align: center;
     height: 8rem;
@@ -49,43 +61,42 @@ body{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: space-evenly;
+    align-content: space-evenly; /* Fixed this line */
 }
 
 /* card */
-
-.listing-card{
+.listing-card {
     border: none !important;
     margin-bottom: 2rem;
 }
 
-.card-img-top{
+.card-img-top {
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
 }
 
-.card-body{
+.card-body {
     padding: 0 !important;
-
 }
 
 .card-text p {
     font-weight: 400 !important;
 }
 
-.listing-link{
+.listing-link {
     text-decoration: none;
 }
 
 /* card-effect */
-.card-img-overlay{
+.card-img-overlay {
     opacity: 0;
 }
 
-.card-img-overlay:hover{
-    opacity:0.2;
-    background-color: white;
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color:white;
+
 }
 
 .add-btn {
@@ -94,31 +105,155 @@ body{
 }
 
 /* Edit page */
-
-.edit-btn{
+.edit-btn {
     background-color: #fe424d !important;
     border: none !important;
-
 }
 
 /* Show-page */
-
-.show-img{
+.show-img {
     height: 30vh;
 }
 
-.btns{
+.btns {
     display: flex;
-    
 }
 
-.show-card{
+.show-card {
     padding-left: 0;
     padding: 0;
 }
 
 /* map */
-#map { 
-    height: 400px;
-    width: 80vh;
- }
+#map {
+    height: 40vh; /* Changed from fixed height to percentage */
+    width: 90%; /* Changed from 80vh to 90% */
+    max-width: 600px; /* Set a max-width for larger screens */
+}
+
+/* Mobile and Tablet Responsiveness */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .f-info {
+        height: auto; /* Adjust height on small screens */
+        padding: 1rem 0;
+    }
+
+    .card-img-top {
+        height: 200px; /* Adjust image size */
+    }
+
+    .show-img {
+        height: 50vh; /* Smaller height on mobile */
+    }
+
+    #map {
+        height: 50vh; /* Adjust map size */
+        width: 100%; /* Make map full width */
+    }
+
+    .listing-card {
+        margin-bottom: 1rem; /* Reduced margin for mobile */
+    }
+    
+    .tax-toggle{
+        display: none;
+
+    }
+}
+
+#filters{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: auto;
+    width: 900px;
+    margin: auto;
+    box-shadow:  2px 4px 3px rgb(165, 164, 164);
+    border-radius: 4rem;
+    height: 5rem;
+
+  }
+
+  #filters::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for webkit browsers */
+
+  }
+
+  .filter{
+   min-width: 60px;
+   text-align: center;
+   margin-right: 2rem;
+   margin-top: 2rem;
+   opacity: 0.8;
+
+  }
+
+  .filter:hover{
+    opacity: 1;
+    cursor: pointer;
+  }
+
+  .filter p {
+    font-size: 0.8rem;
+  }
+  
+  .tax-info{
+    display: none;
+  }
+
+  .tax-toggle{
+    border: 1px solid rgb(62, 60, 60);
+    border-radius: 1rem;
+    height: 3rem;
+    width: 16rem;
+    padding: 1rem;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1.5rem;
+    
+  }
+
+  .tax-toggle:hover{
+    box-shadow: 1px 1px 8px 3px rgb(165, 164, 164);
+    cursor: pointer;
+  }
+
+  .arrows {
+    display: flex;
+    font-size: 1.7rem;
+    position: absolute;
+    opacity: 0.9;
+    justify-content: space-between;
+    /* border: #303030 1px solid; */
+    width:56.5rem
+    
+    
+    
+  }
+
+  .arrows i {
+    color: #303030;
+    /* border: #8c8c8c 1px solid; */
+    border-radius: 50%;
+    padding: 0.2rem;
+    background-color: white;
+    box-shadow: -8px 4px 8px 1px rgb(165, 164, 164);
+    transition: all 0.3s ease;
+    position: absolute;
+    bottom: 20px;
+    margin-left: 90px;
+    
+  }
+
+ .left-arrow{
+    box-shadow: 2px 4px 3px rgb(99, 20, 20);
+ } 
+
+ 
