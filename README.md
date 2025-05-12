@@ -3,7 +3,7 @@
 WanderLust is a full-stack web application that allows users to explore and list travel destinations. Built with the MERN stack (MongoDB, Express.js, React, Node.js), it provides a seamless experience for travel enthusiasts.
 
 ### 🔗Live Demo:
-wanderlust-qx9m.onrender.com/listings
+https://wanderlust-qx9m.onrender.com/listings
 
 ### 🛠️Features
 
