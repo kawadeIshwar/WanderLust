@@ -1,11 +1,11 @@
-# 🌍WanderLust
+# 🌍 WanderLust
 
 WanderLust is a full-stack web application that allows users to explore and list travel destinations. Built with the MERN stack (MongoDB, Express.js, React, Node.js), it provides a seamless experience for travel enthusiasts.
 
-### 🔗Live Demo:
+### 🔗 Live Demo:
 https://wanderlust-qx9m.onrender.com/listings
 
-### 🛠️Features
+### 🛠️ Features
 
 🏞️ Browse and discover various travel destinations.
 
@@ -26,7 +26,7 @@ Database: MongoDB
 
 Others: Cloudinary for image uploads, Mapbox for maps
 
-### 🧑‍💻Getting Started
+### 🧑‍💻 Getting Started
 #### Follow these steps to set up the project locally:
 
 Clone the repository:
