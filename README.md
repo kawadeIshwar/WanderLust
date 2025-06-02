@@ -50,15 +50,23 @@ Open your browser and navigate to http://localhost:3000
 ### 📁 Project Structure
 
 WanderLust/
+
 ├── controllers/
 
 ├── models/
+
 ├── routes/
+
 ├── views/
+
 ├── public/
+
 ├── utils/
+
 ├── app.js
+
 ├── package.json
+
 └── README.md
 ### 🤝 Contributing
 
