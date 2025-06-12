@@ -14,11 +14,18 @@ body {
     background-color: white;
 }
 
-.search-inp:hover{
+
+
+.navbar-collapse {
+    background-color: white;
+}
+
+
+.search-inp:hover {
     box-shadow: 1px 1px 8px 2px rgb(182, 180, 180);
 }
 
-.search-btn:hover{
+.search-btn:hover {
     box-shadow: 1px 1px 8px 3px rgb(255, 129, 129);
 }
 
@@ -61,7 +68,8 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-content: space-evenly; /* Fixed this line */
+    align-content: space-evenly;
+    /* Fixed this line */
 }
 
 /* card */
@@ -95,7 +103,7 @@ body {
 
 .card-img-overlay:hover {
     opacity: 0.2;
-    background-color:white;
+    background-color: white;
 
 }
 
@@ -126,9 +134,12 @@ body {
 
 /* map */
 #map {
-    height: 40vh; /* Changed from fixed height to percentage */
-    width: 90%; /* Changed from 80vh to 90% */
-    max-width: 600px; /* Set a max-width for larger screens */
+    height: 40vh;
+    /* Changed from fixed height to percentage */
+    width: 90%;
+    /* Changed from 80vh to 90% */
+    max-width: 600px;
+    /* Set a max-width for larger screens */
 }
 
 /* Mobile and Tablet Responsiveness */
@@ -139,121 +150,104 @@ body {
     }
 
     .f-info {
-        height: auto; /* Adjust height on small screens */
+        height: auto;
+        /* Adjust height on small screens */
         padding: 1rem 0;
     }
 
     .card-img-top {
-        height: 200px; /* Adjust image size */
+        height: 200px;
+        /* Adjust image size */
     }
 
     .show-img {
-        height: 50vh; /* Smaller height on mobile */
+        height: 50vh;
+        /* Smaller height on mobile */
     }
 
     #map {
-        height: 50vh; /* Adjust map size */
-        width: 100%; /* Make map full width */
+        height: 50vh;
+        /* Adjust map size */
+        width: 100%;
+        /* Make map full width */
     }
 
     .listing-card {
-        margin-bottom: 1rem; /* Reduced margin for mobile */
+        margin-bottom: 1rem;
+        /* Reduced margin for mobile */
     }
-    
-    .tax-toggle{
+
+    .tax-toggle {
         display: none;
 
     }
 }
 
-#filters{
+#filters {
     display: flex;
-    align-items: center;
-    justify-content: center;
     overflow-x: auto;
-    width: 900px;
+    gap: 0.1rem;
+    padding: 1rem;
+    border: 1px solid rgb(227, 227, 227);
+    box-shadow: inset 20px 0 15px -15px rgba(108, 107, 107, 0.708), inset -20px 0 15px -15px rgb(108, 107, 107,  0.708);
+    border-radius: 40px;
+    max-width: 900px;
     margin: auto;
-    box-shadow:  2px 4px 3px rgb(165, 164, 164);
-    border-radius: 4rem;
-    height: 5rem;
+    margin-top: 0.9rem;
+    height: 70px;
+    scrollbar-width: none;
+    padding-top: 10px;
+    
+}
 
-  }
 
-  #filters::-webkit-scrollbar {
-    display: none; /* Hide scrollbar for webkit browsers */
+#filters::-webkit-scrollbar {
+    display: none;
+    /* Hide scrollbar in Chrome */
+}
 
-  }
 
-  .filter{
-   min-width: 60px;
-   text-align: center;
-   margin-right: 2rem;
-   margin-top: 2rem;
-   opacity: 0.8;
+.filter {
+    min-width: 60px;
+    text-align: center;
+    margin-right: 2rem;
+    opacity: 0.8;
+    font-size: 0.9rem;
+    transition: all 0.3s ease
 
-  }
+}
 
-  .filter:hover{
+.filter i {
+  font-size: 1rem; /* smaller icon */
+}
+
+.filter:hover {
     opacity: 1;
     cursor: pointer;
-  }
+    transform: scale(1.1);
+}
 
-  .filter p {
-    font-size: 0.8rem;
-  }
-  
-  .tax-info{
+
+.tax-info {
     display: none;
-  }
+}
 
-  .tax-toggle{
+.tax-toggle {
     border: 1px solid rgb(62, 60, 60);
     border-radius: 1rem;
-    height: 3rem;
+    height: 2rem;
     width: 16rem;
     padding: 1rem;
     margin: auto;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 1.5rem;
-    
-  }
+    margin-top: 1rem;
+}
 
-  .tax-toggle:hover{
+.tax-toggle:hover {
     box-shadow: 1px 1px 8px 3px rgb(165, 164, 164);
     cursor: pointer;
-  }
+    border: none;
+}
 
-  .arrows {
-    display: flex;
-    font-size: 1.7rem;
-    position: absolute;
-    opacity: 0.9;
-    justify-content: space-between;
-    /* border: #303030 1px solid; */
-    width:56.5rem
-    
-    
-    
-  }
-
-  .arrows i {
-    color: #303030;
-    /* border: #8c8c8c 1px solid; */
-    border-radius: 50%;
-    padding: 0.2rem;
-    background-color: white;
-    box-shadow: -8px 4px 8px 1px rgb(165, 164, 164);
-    transition: all 0.3s ease;
-    position: absolute;
-    bottom: 20px;
-    margin-left: 90px;
-    
-  }
-
- .left-arrow{
-    box-shadow: 2px 4px 3px rgb(99, 20, 20);
- } 
-
- 
